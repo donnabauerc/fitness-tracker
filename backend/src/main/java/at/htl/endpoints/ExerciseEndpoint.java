@@ -70,4 +70,11 @@ public class ExerciseEndpoint {
         exerciseRepository.delete(exerciseRepository.findById(id));
         return Response.ok().build();
     }
+
+    @GET // TODO: slight bug
+    @Path("/list-possibilities")
+    public Response listDistinctNames() {
+        log.info("List of Distinct Exercise names ");
+        return Response.ok(exerciseRepository.listDistinctNames()).build();
+    }
 }

@@ -31,3 +31,7 @@ Content-Type: application/json
     "reps": [10, 12, 12, 9],
     "weight": [60, 60, 60, 70]
 }
+
+### List of distinct Exercise Names
+GET http://localhost:8080/exercise/list-possibilities
+Accept: application/json
