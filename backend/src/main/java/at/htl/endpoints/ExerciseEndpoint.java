@@ -73,6 +73,7 @@ public class ExerciseEndpoint {
 
     @GET // TODO: slight bug
     @Path("/list-possibilities")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response listDistinctNames() {
         log.info("List of Distinct Exercise names ");
         return Response.ok(exerciseRepository.listDistinctNames()).build();
