@@ -1,0 +1,34 @@
+### create User
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+    "username": "donnabauerc",
+    "firstname": "christian",
+    "lastname": "donnabauer",
+    "email": "cdonnabauer@gmail.com"
+}
+
+### listALl
+GET http://localhost:8080/user/listall
+Accept: application/json
+
+### getById 1
+GET http://localhost:8080/user/1
+Accept: application/json
+
+### delete created Exercise
+DELETE http://localhost:8080/user/delete/1 
+Accept: application/json
+
+### update Exercise
+PUT http://localhost:8080/user
+Content-Type: application/json
+
+{
+    "id": 1,
+    "username": "donnabauerc",
+    "firstname": "christian",
+    "lastname": "donnabauer",
+    "email": "ddonnabauer@gmail.com"
+}
