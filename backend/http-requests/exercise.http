@@ -1,0 +1,33 @@
+### create Exercise
+POST http://localhost:8080/exercise
+Content-Type: application/json
+
+{
+    "name": "Lat Zug",
+    "reps": [10, 12, 12, 9],
+    "weight": [60, 60, 60, 60]
+}
+
+### listALl
+GET http://localhost:8080/exercise/listall
+Accept: application/json
+
+### getById 1
+GET http://localhost:8080/exercise/1
+Accept: application/json
+
+### delete created Exercise
+DELETE http://localhost:8080/exercise/delete/1 
+Accept: application/json
+
+### update Exercise
+PUT http://localhost:8080/exercise
+Content-Type: application/json
+
+{
+    "id": 1,
+    "sets": 4,
+    "name": "Lat Zug",
+    "reps": [10, 12, 12, 9],
+    "weight": [60, 60, 60, 70]
+}
