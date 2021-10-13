@@ -99,3 +99,7 @@ Content-Type: application/json
   },
   "workoutType": "PULL"
 }
+
+### Get Last Weeks Workout for User 1
+GET http://localhost:8080/workout/last-week/1
+Accept: application/json

@@ -15,7 +15,9 @@ import javax.ws.rs.core.Response;
 
 import org.jboss.logging.Logger;
 
+import at.htl.entities.User;
 import at.htl.entities.Workout;
+import at.htl.repositories.UserRepository;
 import at.htl.repositories.WorkoutRepository;
 
 @Path("/workout")
@@ -26,6 +28,9 @@ public class WorkoutEndpoint {
 
     @Inject
     WorkoutRepository workoutRepository;
+
+    @Inject
+    UserRepository userRepository;
 
     @GET
     @Path("/{id}")
@@ -69,5 +74,13 @@ public class WorkoutEndpoint {
         log.info("Delete By Id");
         workoutRepository.delete(workoutRepository.findById(id));
         return Response.ok().build();
+    }
+
+    @GET
+    @Path("/last-week/{userId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response lastWeekWorkouts(@PathParam("userId")long id) {
+        log.info("Get last Week Workouts");
+        return Response.ok(workoutRepository.getLastWeeksWorkouts(userRepository.findById(id))).build();
     }
 }
