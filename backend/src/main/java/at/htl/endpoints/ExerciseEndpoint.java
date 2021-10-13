@@ -71,7 +71,7 @@ public class ExerciseEndpoint {
         return Response.ok().build();
     }
 
-    @GET // TODO: slight bug
+    @GET
     @Path("/list-possibilities")
     @Produces(MediaType.APPLICATION_JSON)
     public Response listDistinctNames() {
