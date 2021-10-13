@@ -1,0 +1,101 @@
+### create workout
+POST http://localhost:8080/workout
+Content-Type: application/json
+
+{
+    "starttime": "2021-10-13 20:00:00",
+    "endtime": "2021-10-13 22:00:00",
+    "calories": "956",
+    "bpm": "121",
+    "note": "",
+    "user": {
+        "username": "donnabauerc",
+        "firstname": "christian",
+        "lastname": "donnabauer",
+        "email": "cdonnabauer@gmail.com"
+    },
+    "workoutType": "PULL",
+    "exercises": [
+        {
+            "name": "RDL",
+            "reps": [10, 10, 8, 6],
+            "weight": [60, 60, 70, 70]
+        },
+        {
+            "name": "Lat Zug",
+            "reps": [10, 12, 12, 9],
+            "weight": [60, 60, 60, 60]
+        }
+    ]
+
+}
+
+### listALl
+GET http://localhost:8080/workout/listall
+Accept: application/json
+
+### getById 2
+GET http://localhost:8080/workout/2
+Accept: application/json
+
+### delete created Workout
+DELETE http://localhost:8080/workout/delete/2 
+Accept: application/json
+
+### update Exercise
+PUT http://localhost:8080/workout
+Content-Type: application/json
+
+{
+  "id": 2,
+  "bpm": 121,
+  "calories": 956,
+  "duration": 2,
+  "endtime": "2021-10-13 22:00:00",
+  "exercises": [
+    {
+      "id": 3,
+      "name": "RDL",
+      "reps": [
+        10,
+        10,
+        8,
+        6
+      ],
+      "sets": 0,
+      "weight": [
+        60.0,
+        60.0,
+        70.0,
+        70.0
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Lat Zug",
+      "reps": [
+        10,
+        12,
+        12,
+        9
+      ],
+      "sets": 0,
+      "weight": [
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ]
+    }
+  ],
+  "note": "",
+  "starttime": "2021-10-13 20:00:00",
+  "user": {
+    "id": 1,
+    "email": "cdonnabauer@gmail.com",
+    "firstname": "christian",
+    "lastname": "donnabauer",
+    "username": "donnabauerc"
+  },
+  "workoutType": "PULL"
+}
