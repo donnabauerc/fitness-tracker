@@ -48,7 +48,8 @@ public class ExerciseEndpoint {
     @Transactional
     public Response create(Exercise exercise) {
         log.info("Create Exercise");
-        exerciseRepository.getEntityManager().merge(exercise);
+        exerciseRepository.persist(exercise);
+        //exerciseRepository.getEntityManager().merge(exercise);
         return Response.ok().build();
     }
 

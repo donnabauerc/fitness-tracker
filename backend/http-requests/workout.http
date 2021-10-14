@@ -19,12 +19,14 @@ Content-Type: application/json
         {
             "name": "RDL",
             "reps": [10, 10, 8, 6],
-            "weight": [60, 60, 70, 70]
+            "weight": [60, 60, 70, 70],
+            "sets": 4
         },
         {
             "name": "Lat Zug",
             "reps": [10, 12, 12, 9],
-            "weight": [60, 60, 60, 60]
+            "weight": [60, 60, 60, 60],
+            "sets": 4
         }
     ]
 
@@ -62,7 +64,7 @@ Content-Type: application/json
         8,
         6
       ],
-      "sets": 0,
+      "sets": 4,
       "weight": [
         60.0,
         60.0,
@@ -79,7 +81,7 @@ Content-Type: application/json
         12,
         9
       ],
-      "sets": 0,
+      "sets": 4,
       "weight": [
         60.0,
         60.0,

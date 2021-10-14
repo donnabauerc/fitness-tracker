@@ -1,6 +1,7 @@
 package at.htl.entities;
 
 import java.util.LinkedList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -17,15 +18,16 @@ public class Exercise extends PanacheEntity{
     public LinkedList<Double> weight;
 
     public Exercise() {
+        this.sets = 0;
         this.reps = new LinkedList<Integer>();
         this.weight = new LinkedList<Double>();
     }
 
-    public Exercise(String name, LinkedList<Integer> reps, LinkedList<Double> weight) {
+    public Exercise(String name, LinkedList<Integer> reps, LinkedList<Double> weight, int sets) {
         this.name = name;
         this.reps = reps;
         this.weight = weight;
-        this.sets = reps.size(); //TODO: seems to always return 0
+        this.sets = sets;
     }
         
 }
