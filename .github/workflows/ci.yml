@@ -31,4 +31,4 @@ jobs:
       - name: copy binaries to oravm
         run: |
           ls -l backend/target/
-          scp backend/target/fitness-tracker-1.0.0-SNAPSHOT-runner.jar ${{ secrets.ORAVM_USER }}@${{ secrets.ORAVM_IP }}:
+          scp backend/target/fitness-tracker-1.0.0-SNAPSHOT-runner.jar ${{ secrets.ORAVM_USER }}@${{ secrets.ORAVM_IP }}:/opt
